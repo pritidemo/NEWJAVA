@@ -1,0 +1,130 @@
+LinkedList
+----------
+LinkedList is a linear data structure. However LinkedList elements are not stored in contiguous locations like arrays, they are linked with each other using pointers. Each element of the LinkedList has the reference(address/pointer) to the next element of the LinkedList.
+
+
+import java.util.*;
+ 
+public class Pro1 {
+ 
+    
+    public static void main(String args[])
+    {
+        // Creating object of the
+        // class linked list
+        LinkedList<String> ll = new LinkedList<String>();
+ 
+        // Adding elements to the linked list
+        ll.add("Mahesh");
+        ll.add("Nikita");
+        ll.addLast("Meena");
+        ll.addFirst("Pooja");
+        ll.add(2, "Reshma");
+ 
+        System.out.println(ll);
+ 
+        ll.remove("Nikita");
+        ll.remove(3);
+        ll.removeFirst();
+        ll.removeLast();
+ 
+        System.out.println(ll);
+    }
+}
+
+Adding elements:
+
+import java.util.*;
+   
+public class Pro2 {
+   
+    public static void main(String args[])
+    {
+        LinkedList<String> ll = new LinkedList<>();
+   
+        ll.add("ABC");
+        ll.add("XYZ");
+        ll.add(1, "Demo");
+   
+        System.out.println(ll);
+    }
+}
+
+Changing Elements:
+import java.util.*;
+   
+public class Pro4 {
+   
+    public static void main(String args[])
+    {
+        LinkedList<String> ll = new LinkedList<>();
+   
+        ll.add("ABC");
+        ll.add("XYZ");
+        ll.add(1, "Demo");
+   
+        System.out.println("Initial LinkedList " + ll);
+   
+        ll.set(1, "EG");
+   
+        System.out.println("Updated LinkedList " + ll);
+    }
+}
+
+Removing Elements:
+
+import java.util.*;
+   
+public class Pro5 {
+   
+    public static void main(String args[])
+    {
+        LinkedList<String> ll = new LinkedList<>();
+   
+        ll.add("ABC");
+        ll.add("XYZ");
+        ll.add(1, "Demo");
+   
+        System.out.println(
+            "Initial LinkedList " + ll);
+   
+        ll.remove(1);
+   
+        System.out.println("After the Index Removal " + ll);
+   
+        ll.remove("XYZ");
+   
+        System.out.println("After the Object Removal " + ll);
+    }
+}
+
+Iterating the LinkedList:
+
+import java.util.*;
+   
+public class Pro6 {
+   
+    public static void main(String args[])
+    {
+        LinkedList<String> ll = new LinkedList<>();
+   
+        ll.add("ANM");
+        ll.add("ZXC");
+        ll.add(1, "DEMO");
+   
+        
+        for (int i = 0; i < ll.size(); i++) 
+	{
+   
+            System.out.print(ll.get(i) + " ");
+        }
+   
+        System.out.println();
+   
+        // Using the for each loop
+        for (String str : ll)
+	{
+            System.out.print(str + " ");
+	}
+    }
+}
